@@ -23,7 +23,7 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
     { path: '@/components/coreComponenets' },
-    { path: '@/components/welcomePageComponents' },
+    { path: '@/components/loginPageComponents' },
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules

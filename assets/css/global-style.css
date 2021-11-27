@@ -14,6 +14,7 @@ html.dark {
   --brand: #0af;
   --text1: #b6c2c9;
   --text2: #929fa5;
+  --text2Opaq: rgba(146, 159, 165, 0.5);
   --surface1: #2e3538;
   --surface2: #394246;
   --surface3: #494e50;
@@ -30,6 +31,7 @@ html.light {
   --brand: #0af;
   --text1: #023;
   --text2: #365463;
+  --text2Opaq: rgba(54, 84, 99, 0.5);
   --surface1: #dfe8ec;
   --surface2: #fcfdfd;
   --surface3: #e7ecef;
@@ -59,6 +61,7 @@ html.light {
 body {
   font-size: 1.6rem;
   background-color: var(--surface1);
+  color: var(--text1);
 }
 
 .globalMarginWrapper {
