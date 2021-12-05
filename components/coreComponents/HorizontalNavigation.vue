@@ -1,6 +1,6 @@
 <template>
-  <nav class="headerNavigationWrapper">
-    <div class="headerNavigation globalMarginWrapper">
+  <nav class="horizontalNavigationWrapper">
+    <div class="horizontalNavigation globalMarginWrapper">
       <div class="karmaLogoWrapper">
         <inline-svg
           :src="require('@/assets/svg/karma-logo.svg')"
@@ -29,7 +29,7 @@
 import { inject } from '@nuxtjs/composition-api'
 
 export default {
-  name: 'HeaderNavigation',
+  name: 'HorizontalNavigation',
   setup() {
     const themeLight = inject('themeLight')
     const changeTheme = inject('changeTheme')
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.headerNavigation {
+.horizontalNavigation {
   display: flex;
   align-items: center;
 

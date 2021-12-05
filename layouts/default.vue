@@ -1,19 +1,30 @@
 <template>
-  <div id="app">
-    <header-navigation></header-navigation>
+  <div
+    id="app"
+    :class="{
+      horizontalLayout: horizontalLayout,
+      verticalLayout: !horizontalLayout,
+    }"
+  >
+    <horizontal-navigation v-if="horizontalLayout"></horizontal-navigation>
+    <vertical-navigation v-else></vertical-navigation>
     <Nuxt />
   </div>
 </template>
 
 <script>
-import { ref, watch, provide } from '@nuxtjs/composition-api'
-import headerNavigation from '@/components/coreComponents/HeaderNavigation.vue'
+import { ref, watch, provide, useRoute } from '@nuxtjs/composition-api'
+import HorizontalNavigation from '~/components/coreComponents/HorizontalNavigation.vue'
+import VerticalNavigation from '~/components/coreComponents/VerticalNavigation.vue'
 
 export default {
   components: {
-    headerNavigation,
+    HorizontalNavigation,
+    VerticalNavigation,
   },
   setup() {
+    const route = useRoute()
+    const horizontalLayout = route.value.path === '/'
     const themeLight = ref(false)
 
     watch(themeLight, changeTheme)
@@ -34,6 +45,7 @@ export default {
 
     return {
       themeLight,
+      horizontalLayout,
     }
   },
 }
@@ -42,5 +54,9 @@ export default {
 <style lang="scss">
 #app {
   height: 100vh;
+
+  &.verticalLayout {
+    display: flex;
+  }
 }
 </style>
