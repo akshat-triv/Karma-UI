@@ -34,7 +34,11 @@
         component-type="password"
       ></input-text>
 
-      <span class="forgotPassword highlight underline" @click="forgotPassword">
+      <span
+        v-if="!signupActive"
+        class="forgotPassword highlight underline"
+        @click="forgotPassword"
+      >
         forgot password?
       </span>
 
@@ -102,7 +106,7 @@ export default {
 <style lang="scss" scoped>
 .loginPageRight {
   height: 100%;
-  background: var(--surface3);
+  background: var(--surface1);
   flex: 1;
   display: flex;
   justify-content: center;
@@ -147,7 +151,7 @@ export default {
 }
 
 .highlight {
-  color: var(--brand);
+  color: var(--primary-400);
   display: inline-block;
   &:hover {
     cursor: pointer;

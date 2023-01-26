@@ -20,7 +20,7 @@ export default {
 <style lang="scss">
 .welcomeImage {
   .circles {
-    fill: var(--surface3);
+    fill: var(--surface2);
   }
   .human {
     animation: hover 2s linear infinite;
@@ -52,7 +52,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background: var(--surface1);
+  background: var(--surface3);
   flex: 0 0 65%;
 }
 
@@ -60,7 +60,7 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  color: var(--surface1);
+  color: var(--surface3);
 
   &Wrapper {
     width: 70rem;

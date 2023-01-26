@@ -48,7 +48,7 @@
       </div>
     </div>
     <div class="navigationItemCollection">
-      <div class="navigationItem encircled">
+      <div class="navigationItem secondary encircled">
         <div class="navigationItemIconWrapper gridSize32">
           <inline-svg
             v-if="themeLight"
@@ -64,7 +64,7 @@
           ></inline-svg>
         </div>
       </div>
-      <div class="navigationItem">
+      <div class="navigationItem secondary">
         <div class="navigationItemIconWrapper">
           <inline-svg
             :src="require('@/assets/svg/settings.svg')"
@@ -99,7 +99,7 @@ export default {
   height: 100%;
   width: 6rem;
   padding: 1rem;
-  background: var(--surface2);
+  background: var(--surface1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,7 +118,7 @@ export default {
   &.encircled {
     clip-path: circle(50%);
     padding: 0.5rem 0;
-    background-color: var(--surface1);
+    background-color: var(--surface2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,8 +128,12 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  color: var(--text2);
+  color: var(--text1);
   transition: color 0.3s;
+
+  &.secondary {
+    color: var(--text2);
+  }
 
   &:hover {
     cursor: pointer;

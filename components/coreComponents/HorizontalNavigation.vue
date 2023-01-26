@@ -49,8 +49,9 @@ export default {
 
   &Wrapper {
     padding: 1rem 0;
-    background: var(--surface2);
+    background: var(--surface1);
     height: 6.8rem;
+    border-bottom: 1px solid var(--surface3);
   }
 
   .karmaLogo {
